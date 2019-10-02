@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;        //Permite utilizar las variables de conexión
+using MiLibreria;
 
 namespace FactuxD
 {
@@ -20,18 +21,7 @@ namespace FactuxD
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection Con = new SqlConnection("Data Source=LAPTOP-9VN6QT9R\\SQLEXPRESS;Initial Catalog=Administracion;Integrated Security=True");
-                Con.Open();
-                MessageBox.Show("La conexión fue exitosa");
-            }
-            catch(Exception Error)
-            {
-
-                MessageBox.Show("Se ha producido un error: " + Error.Message);
-
-            }
+            Utilidades.Ejecutar("Select *");
 
         }
     }
