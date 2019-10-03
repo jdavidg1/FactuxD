@@ -1,6 +1,6 @@
 ﻿namespace FactuxD
 {
-    partial class Form1
+    partial class VentanaLogin
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -94,13 +94,15 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(379, 55);
+            this.pictureBox1.Image = global::FactuxD.Properties.Resources.Userjpg;
+            this.pictureBox1.Location = new System.Drawing.Point(351, 67);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(196, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // VentanaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,8 +114,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIniciar);
-            this.Name = "Form1";
+            this.Name = "VentanaLogin";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaLogin_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

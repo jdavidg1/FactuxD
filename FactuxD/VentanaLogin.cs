@@ -13,9 +13,9 @@ using System.Data;              //Para poder utilizar las variables dataset.
 
 namespace FactuxD
 {
-    public partial class Form1 : Form
+    public partial class VentanaLogin : Form
     {
-        public Form1()
+        public VentanaLogin()
         {
             InitializeComponent();
         }
@@ -38,7 +38,23 @@ namespace FactuxD
                 if(cuenta==txtNomAcc.Text.Trim() && contra==txtPass.Text.Trim())
                 {
 
-                    MessageBox.Show("Se ha iniciado");
+                    if (Convert.ToBoolean(ds.Tables[0].Rows[0]["Status_admin"])==true)       //verificar si el usuario es administrador
+                    {
+                        //Llamar una instancia de la ventana de administrador y ocultar la ventana actual.
+
+                        VentanaAdmin VenAd = new VentanaAdmin();
+                        this.Hide();
+                        VenAd.Show();
+
+                    }
+
+                    else
+                    {
+                        VentanaUser VenUs = new VentanaUser();
+                        this.Hide();
+                        VenUs.Show();
+
+                    }
 
                 }
 
@@ -50,6 +66,11 @@ namespace FactuxD
             }
 
 
+        }
+
+        private void VentanaLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();         //Para que la aplicación se cierre cuando se cierre el formulario.
         }
     }
 }
