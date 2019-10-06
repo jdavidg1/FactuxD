@@ -32,9 +32,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblUs = new System.Windows.Forms.Label();
+            this.lblNomUs = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -78,32 +78,32 @@
             this.button1.Text = "Contenedor principal";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // lblCodigo
             // 
-            this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(109, 136);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(202, 27);
-            this.label6.TabIndex = 17;
+            this.lblCodigo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCodigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCodigo.Location = new System.Drawing.Point(109, 136);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(202, 27);
+            this.lblCodigo.TabIndex = 17;
             // 
-            // label5
+            // lblUs
             // 
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(109, 86);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(202, 27);
-            this.label5.TabIndex = 16;
+            this.lblUs.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblUs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblUs.Location = new System.Drawing.Point(109, 86);
+            this.lblUs.Name = "lblUs";
+            this.lblUs.Size = new System.Drawing.Size(202, 27);
+            this.lblUs.TabIndex = 16;
             // 
-            // label4
+            // lblNomUs
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(109, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(202, 27);
-            this.label4.TabIndex = 15;
+            this.lblNomUs.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNomUs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNomUs.Location = new System.Drawing.Point(109, 37);
+            this.lblNomUs.Name = "lblNomUs";
+            this.lblNomUs.Size = new System.Drawing.Size(202, 27);
+            this.lblNomUs.TabIndex = 15;
             // 
             // label3
             // 
@@ -140,6 +140,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(41, 202);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(172, 133);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
@@ -153,15 +154,17 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.lblUs);
+            this.Controls.Add(this.lblNomUs);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "VentanaUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VentanaUser";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaUser_FormClosed);
+            this.Load += new System.EventHandler(this.VentanaUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -175,9 +178,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblUs;
+        private System.Windows.Forms.Label lblNomUs;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

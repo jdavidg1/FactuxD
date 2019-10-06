@@ -20,6 +20,8 @@ namespace FactuxD
             InitializeComponent();
         }
 
+        public static String Codigo = "";
+        
         private void btnIniciar_Click(object sender, EventArgs e)
         {
 
@@ -29,6 +31,8 @@ namespace FactuxD
                 string CMD = string.Format("Select * FROM Usuarios WHERE account='{0}' AND password= '{1}'", txtNomAcc.Text.Trim(), txtPass.Text.Trim());
 
                 DataSet ds = Utilidades.Ejecutar(CMD);
+
+                Codigo = ds.Tables[0].Rows[0]["id_usuario"].ToString().Trim();              //Obtengo el código de la persona que se está intentando conectar
 
                 string cuenta = ds.Tables[0].Rows[0]["account"].ToString().Trim();         //El cero en las columnas es porque devuelve un solo usuario
                 string contra = ds.Tables[0].Rows[0]["password"].ToString().Trim();

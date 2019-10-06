@@ -43,7 +43,7 @@
             this.btnIniciar.Location = new System.Drawing.Point(75, 267);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(75, 23);
-            this.btnIniciar.TabIndex = 0;
+            this.btnIniciar.TabIndex = 2;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
@@ -53,7 +53,7 @@
             this.btnSalir.Location = new System.Drawing.Point(324, 267);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 1;
+            this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
@@ -82,7 +82,7 @@
             this.txtNomAcc.Location = new System.Drawing.Point(217, 108);
             this.txtNomAcc.Name = "txtNomAcc";
             this.txtNomAcc.Size = new System.Drawing.Size(100, 20);
-            this.txtNomAcc.TabIndex = 4;
+            this.txtNomAcc.TabIndex = 0;
             // 
             // txtPass
             // 
@@ -90,7 +90,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(100, 20);
-            this.txtPass.TabIndex = 5;
+            this.txtPass.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -104,6 +104,7 @@
             // 
             // VentanaLogin
             // 
+            this.AcceptButton = this.btnIniciar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 317);
@@ -115,6 +116,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIniciar);
             this.Name = "VentanaLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaLogin_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
